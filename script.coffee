@@ -1,6 +1,6 @@
 # ==UserScript==
 # @name         mb. EDIT RECORDINGS
-# @version      2013.0625.1247
+# @version      2013.625.1247
 # @description  musicbrainz.org release page: Add an edit link to the recordings and allow some editing inline.
 # @namespace    http://userscripts.org/scripts/show/171786
 # @author       Mathieu Arnold (mat/mat813)
