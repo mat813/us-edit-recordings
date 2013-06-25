@@ -1,8 +1,8 @@
 # ==UserScript==
 # @name         mb. EDIT RECORDINGS
-# @version      2013.0624.1447
+# @version      2013.0625.1058
 # @description  musicbrainz.org release page: Add an edit link to the recordings and allow some editing inline.
-# @namespace    http://userscripts.org/scripts/show/XXX
+# @namespace    http://userscripts.org/scripts/show/171786
 # @author       Mathieu Arnold (mat/mat813)
 # @licence      CC BY-NC-SA 3.0 FR (http://creativecommons.org/licenses/by-nc-sa/3.0/fr/)
 # @since        2013.06.24.
@@ -63,5 +63,7 @@ if relMBID and (tracksHtml = document.querySelectorAll("div#content tbody[about^
     if rec = track.querySelector("a[rel='mo:publication_of']")
       s = document.createElement("span")
       s.style.setProperty('float', 'right')
+      s.appendChild document.createTextNode("(")
       s.appendChild createA(editRecordingText, rec.getAttribute("href")+"/edit", "edit this recording")
+      s.appendChild document.createTextNode(")")
       addAfter s, rec
